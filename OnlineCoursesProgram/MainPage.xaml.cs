@@ -26,5 +26,10 @@ namespace OnlineCoursesProgram
         {
             this.InitializeComponent();
         }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            // do something
+        }
     }
 }
