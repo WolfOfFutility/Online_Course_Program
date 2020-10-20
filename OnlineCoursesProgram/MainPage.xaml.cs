@@ -27,9 +27,9 @@ namespace OnlineCoursesProgram
             this.InitializeComponent();
         }
 
-        private void Button1_Click(object sender, RoutedEventArgs e)
+        private void Courses_Click(object sender, RoutedEventArgs e)
         {
-            // do something
+            mainFrame.Navigate(typeof(ClassListPage));
         }
     }
 }

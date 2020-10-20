@@ -14,20 +14,9 @@
             <RowDefinition Height="15*" />
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Stretch" Background="#777">
-            <Button VerticalAlignment="Stretch" Width="100">Top Menu 1</Button>
+            <Button VerticalAlignment="Stretch" Width="100" Click="Courses_Click">Courses</Button>
+            <Button VerticalAlignment="Stretch" Width="100">Posts</Button>
         </StackPanel>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*" />
-                <ColumnDefinition Width="9*" />
-            </Grid.ColumnDefinitions>
-            <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="#CCC" BorderThickness="0, 0, 1, 0">
-                <Button x:Name="Button1" HorizontalAlignment="Stretch" Height="50" Foreground="Black" Background="#CCC" Click="Button1_Click">Button 1</Button>
-                <Button x:Name="Button2" HorizontalAlignment="Stretch" Height="50" Foreground="Black" Background="#CCC">Button 2</Button>
-                <Button x:Name="Button3" HorizontalAlignment="Stretch" Height="50" Foreground="Black" Background="#CCC">Button 3</Button>
-                <Button x:Name="Button4" HorizontalAlignment="Stretch" Height="50" Foreground="Black" Background="#CCC">Button 4</Button>
-            </StackPanel>
-            <Frame Grid.Column="1" x:Name="mainFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#333"/>
-        </Grid>
+        <Frame Grid.Row="1" x:Name="mainFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Lightblue"/>
     </Grid>
 </Page>
