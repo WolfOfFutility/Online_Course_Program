@@ -123,11 +123,16 @@
     <Compile Include="ClassListPage.xaml.cs">
       <DependentUpon>ClassListPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CourseContent.cs" />
     <Compile Include="IndivClassPage.xaml.cs">
       <DependentUpon>IndivClassPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Post.cs" />
+    <Compile Include="PostsPage.xaml.cs">
+      <DependentUpon>PostsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -164,6 +169,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PostsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

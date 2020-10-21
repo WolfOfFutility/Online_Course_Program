@@ -14,10 +14,10 @@
             <ColumnDefinition Width="9*" />
         </Grid.ColumnDefinitions>
         <StackPanel x:Name="classListPanel" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderBrush="#CCC" BorderThickness="0, 0, 1, 0">
-            <Button x:Name="Button1" Margin="0, 0, 0, 1" HorizontalAlignment="Stretch" Height="50" Foreground="Black" Background="#CCC" Click="Button1_Click">[Class Code] - Lesson 1</Button>
+            <!--<Button x:Name="Button1" Margin="0, 0, 0, 1" HorizontalAlignment="Stretch" Height="50" Foreground="Black" Background="#CCC" Click="Button1_Click">[Class Code] - Lesson 1</Button>
             <Button x:Name="Button2" Margin="0, 0, 0, 1" HorizontalAlignment="Stretch" Height="50" Foreground="Black" Background="#CCC" Click="Button2_Click">[Class Code] - Lesson 2</Button>
             <Button x:Name="Button3" Margin="0, 0, 0, 1" HorizontalAlignment="Stretch" Height="50" Foreground="Black" Background="#CCC">[Class Code] - Lesson 3</Button>
-            <Button x:Name="Button4" Margin="0, 0, 0, 1" HorizontalAlignment="Stretch" Height="50" Foreground="Black" Background="#CCC">[Class Code] - Lesson 4</Button>
+            <Button x:Name="Button4" Margin="0, 0, 0, 1" HorizontalAlignment="Stretch" Height="50" Foreground="Black" Background="#CCC">[Class Code] - Lesson 4</Button>-->
         </StackPanel>
         <Frame Grid.Column="1" x:Name="subFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#333"/>
     </Grid>

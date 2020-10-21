@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="OnlineCoursesProgram.PostsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineCoursesProgram"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <!-- Posts Feed -->
+    <ScrollViewer Background="#333">
+        <StackPanel x:ConnectionId='2' x:Name="postListPanel">
+            <!--<Grid MinHeight="300" Margin="50, 25, 50, 20" Background="#CCC">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5*" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Background="DodgerBlue" Orientation="Horizontal">
+                    <TextBlock Text="User Name" VerticalAlignment="Center" Margin="10, 0, 0, 0" FontSize="20"/>
+                </StackPanel>
+            </Grid>
+            <Grid MinHeight="300" Margin="50, 25, 50, 20" Background="#CCC">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5*" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Background="DodgerBlue" Orientation="Horizontal">
+                    <TextBlock Text="User Name" VerticalAlignment="Center" Margin="10, 0, 0, 0" FontSize="20"/>
+                </StackPanel>
+            </Grid>
+            <Grid MinHeight="300" Margin="50, 25, 50, 20" Background="#CCC">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5*" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Background="DodgerBlue" Orientation="Horizontal">
+                    <TextBlock Text="User Name" VerticalAlignment="Center" Margin="10, 0, 0, 0" FontSize="20"/>
+                </StackPanel>
+            </Grid>
+            <Grid MinHeight="300" Margin="50, 25, 50, 20" Background="#CCC">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5*" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Background="DodgerBlue" Orientation="Horizontal">
+                    <TextBlock Text="User Name" VerticalAlignment="Center" Margin="10, 0, 0, 0" FontSize="20"/>
+                </StackPanel>
+            </Grid>
+            <Grid MinHeight="300" Margin="50, 25, 50, 20" Background="#CCC">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5*" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Background="DodgerBlue" Orientation="Horizontal">
+                    <TextBlock Text="User Name" VerticalAlignment="Center" Margin="10, 0, 0, 0" FontSize="20"/>
+                </StackPanel>
+            </Grid>-->
+        </StackPanel>
+    </ScrollViewer>
+</Page>
+

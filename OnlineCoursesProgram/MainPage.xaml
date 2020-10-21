@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Stretch" Background="#777">
             <Button VerticalAlignment="Stretch" Width="100" Click="Courses_Click">Courses</Button>
-            <Button VerticalAlignment="Stretch" Width="100">Posts</Button>
+            <Button VerticalAlignment="Stretch" Width="100" Click="Posts_Click">Posts</Button>
         </StackPanel>
         <Frame Grid.Row="1" x:Name="mainFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Lightblue"/>
     </Grid>

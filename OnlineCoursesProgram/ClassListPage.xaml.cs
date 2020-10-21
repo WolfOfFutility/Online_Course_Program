@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -8,6 +9,7 @@ using Windows.Data.Json;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Media.Core;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,27 +27,39 @@ namespace OnlineCoursesProgram
     /// </summary>
     public sealed partial class ClassListPage : Page
     {
+        CourseContent course = new CourseContent();
+        List<ClassContent> classList = new List<ClassContent>();
+
         public ClassListPage()
         {
             this.InitializeComponent();
         }
 
-        private void Button1_Click(object sender, RoutedEventArgs e)
+        public void LoadClasses()
         {
-            ClassContent c1 = new ClassContent();
-            c1.Source = "ms-appx:///Assets/testvideo2.mp4";
-            c1.ClassName = "[Class Code] - Lesson 1";
+            foreach (ClassContent x in classList)
+            {
+                Button b = new Button();
+                b.Margin = new Thickness(0, 0, 0, 1);
+                b.HorizontalAlignment = HorizontalAlignment.Stretch;
+                b.Height = 50;
+                b.Foreground = new SolidColorBrush(Colors.Black);
+                b.Background = new SolidColorBrush(Colors.LightGray);
+                b.Content = course.CourseCode + " - " + x.ClassName;
+                b.Click += (s, e) => { subFrame.Navigate(typeof(IndivClassPage), x); };
 
-            subFrame.Navigate(typeof(IndivClassPage), c1);
+                classListPanel.Children.Add(b);
+            }
         }
 
-        private void Button2_Click(object sender, RoutedEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            ClassContent c2 = new ClassContent();
-            c2.Source = "ms-appx:///Assets/testingvideo.mp4";
-            c2.ClassName = "[Class Code] - Lesson 2";
+            course = e.Parameter as CourseContent;
+            classList = course.ClassList;
 
-            subFrame.Navigate(typeof(IndivClassPage), c2);
+            LoadClasses();
+
+            base.OnNavigatedTo(e);
         }
     }
 }

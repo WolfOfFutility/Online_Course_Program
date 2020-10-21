@@ -25,6 +25,7 @@ namespace OnlineCoursesProgram
     public sealed partial class IndivClassPage : Page
     {
         string m1source = "";
+        bool isPlaying = false;
 
         public IndivClassPage()
         {
@@ -33,13 +34,28 @@ namespace OnlineCoursesProgram
 
         private void PlayVideo(object sender, RoutedEventArgs e)
         {
-            videoPlayer.Source = MediaSource.CreateFromUri(new Uri(m1source));
-            videoPlayer.MediaPlayer.Play();
+            if(!isPlaying)
+            {
+                videoPlayer.MediaPlayer.Play();
+                playVideoButton.Content = "Pause";
+                isPlaying = true;
+            }
+            else
+            {
+                videoPlayer.MediaPlayer.Pause();
+                playVideoButton.Content = "Play";
+                isPlaying = false;
+            }
         }
 
-        private void StopVideo(object sender, RoutedEventArgs e)
+        private void JumpBack(object sender, RoutedEventArgs e)
         {
-            videoPlayer.Source = null;
+            // Jump back 10 seconds
+        }
+
+        private void JumpForward(object sender, RoutedEventArgs e)
+        {
+            // Jump forward 10 seconds
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -47,6 +63,8 @@ namespace OnlineCoursesProgram
             ClassContent cc = e.Parameter as ClassContent;
             m1source = cc.Source;
             lessonTitle.Text = cc.ClassName;
+
+            videoPlayer.Source = MediaSource.CreateFromUri(new Uri(m1source));
 
             base.OnNavigatedTo(e);
         }
