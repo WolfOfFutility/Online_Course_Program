@@ -29,18 +29,34 @@ namespace OnlineCoursesProgram
             this.InitializeComponent();
         }
 
+        public byte[] SaveToByteStream(string source)
+        {
+            FileStream stream = File.OpenRead(source);
+            byte[] buffer = new byte[stream.Length];
+
+            stream.Read(buffer, 0, buffer.Length);
+            stream.Close();
+
+            return buffer;
+        }
+
         private void Courses_Click(object sender, RoutedEventArgs e)
         {
             List<ClassContent> classList = new List<ClassContent>();
             ClassContent c1 = new ClassContent();
-            c1.Source = "ms-appx:///Assets/testvideo2.mp4";
+            c1.Source = SaveToByteStream(@"Assets/testvideo2.mp4");
             c1.ClassName = "Lesson 1";
             classList.Add(c1);
 
             ClassContent c2 = new ClassContent();
-            c2.Source = "ms-appx:///Assets/testingvideo.mp4";
+            c2.Source = SaveToByteStream(@"Assets/testingvideo.mp4");
             c2.ClassName = "Lesson 2";
             classList.Add(c2);
+
+            ClassContent c3 = new ClassContent();
+            c3.Source = SaveToByteStream(@"Assets/testvideo3.mp4");
+            c3.ClassName = "Lesson 3";
+            classList.Add(c3);
 
             CourseContent courseContent = new CourseContent();
             courseContent.CourseName = "Test Course 1";
