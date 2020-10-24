@@ -62,5 +62,10 @@
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="OnlineCoursesProgram.PostsPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CaptureElement">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="OnlineCoursesProgram.RecordingPage" />
   </Roots.RootTypes>
 </Roots>

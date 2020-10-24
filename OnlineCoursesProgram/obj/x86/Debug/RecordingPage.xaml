@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="OnlineCoursesProgram.RecordingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OnlineCoursesProgram"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#333">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <CaptureElement x:ConnectionId='2' x:Name="videoRecorder" Grid.Row="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button x:ConnectionId='3' x:Name="recordButton"  Content="Record" Margin="10, 0, 0, 0"                     />
+        </StackPanel>
+    </Grid>
+</Page>
+

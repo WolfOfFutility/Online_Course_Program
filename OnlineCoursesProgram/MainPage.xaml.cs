@@ -58,6 +58,11 @@ namespace OnlineCoursesProgram
             c3.ClassName = "Lesson 3";
             classList.Add(c3);
 
+            //ClassContent c4 = new ClassContent();
+            //c4.Source = SaveToByteStream(@"Assets/recorded-video-1.mp4");
+            //c4.ClassName = "Testing creating and viewing a video";
+            //classList.Add(c4);
+
             CourseContent courseContent = new CourseContent();
             courseContent.CourseName = "Test Course 1";
             courseContent.CourseCode = "TEST101";
@@ -86,6 +91,11 @@ namespace OnlineCoursesProgram
             courseContent.PostList = postList;
 
             mainFrame.Navigate(typeof(PostsPage), courseContent);
+        }
+
+        private void Record_Click(object sender, RoutedEventArgs e)
+        {
+            mainFrame.Navigate(typeof(RecordingPage));
         }
     }
 }
