@@ -35,6 +35,7 @@
       <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="OnlineCoursesProgram.ClassListPage" />
+    <RootType FullName="OnlineCoursesProgram.HomePage" />
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>

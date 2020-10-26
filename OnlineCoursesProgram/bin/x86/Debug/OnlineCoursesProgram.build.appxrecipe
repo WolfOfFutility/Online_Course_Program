@@ -46,9 +46,6 @@
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\Assets\testvideo3.mp4">
       <PackagePath>Assets\testvideo3.mp4</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\Assets\recorded-video-1.mp4">
-      <PackagePath>Assets\recorded-video-1.mp4</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
@@ -87,6 +84,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\ClassListPage.xbf">
       <PackagePath>ClassListPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\HomePage.xbf">
+      <PackagePath>HomePage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\IndivClassPage.xbf">
       <PackagePath>IndivClassPage.xbf</PackagePath>

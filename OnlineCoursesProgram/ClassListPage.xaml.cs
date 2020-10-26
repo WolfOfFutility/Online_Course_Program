@@ -44,7 +44,7 @@ namespace OnlineCoursesProgram
                 b.HorizontalAlignment = HorizontalAlignment.Stretch;
                 b.Height = 50;
                 b.Foreground = new SolidColorBrush(Colors.Black);
-                b.Background = new SolidColorBrush(Colors.LightGray);
+                b.Background = new SolidColorBrush(Colors.LightBlue);
                 b.Content = course.CourseCode + " - " + x.ClassName;
                 b.Click += (s, e) => { subFrame.Navigate(typeof(IndivClassPage), x); };
 

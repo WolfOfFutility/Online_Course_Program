@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>996F81EA21307BF5F4C62C296390B88312F5413EC2D03CDE2ECD64FA1E721CCC</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>29679BB7F3464B83AC68363F02885FF4BB81EF1715079988707F94D4030DED32</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>8fe61f8b-2dae-442d-aa2f-69a2fdee9431_1.0.0.0_x86__qh87vdy25fyvw</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>8fe61f8b-2dae-442d-aa2f-69a2fdee9431_qh87vdy25fyvw!App</RegisteredUserModeAppID>
     <RegisteredPackageID>8fe61f8b-2dae-442d-aa2f-69a2fdee9431</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-10-24T15:27:00.455</Modified>
+      <Modified>2020-10-25T06:14:27.927</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\OnlineCoursesProgram.exe">
       <PackagePath>entrypoint\OnlineCoursesProgram.exe</PackagePath>
-      <Modified>2020-10-24T15:26:59.268</Modified>
+      <Modified>2020-10-25T06:14:26.901</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\.nuget\packages\newtonsoft.json\12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -61,10 +61,6 @@
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\Assets\testvideo3.mp4">
       <PackagePath>Assets\testvideo3.mp4</PackagePath>
       <Modified>2020-10-22T16:04:48.449</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\Assets\recorded-video-1.mp4">
-      <PackagePath>Assets\recorded-video-1.mp4</PackagePath>
-      <Modified>2020-10-24T15:26:27.872</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -106,31 +102,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\OnlineCoursesProgram.xr.xml">
       <PackagePath>OnlineCoursesProgram.xr.xml</PackagePath>
-      <Modified>2020-10-23T02:13:30.048</Modified>
+      <Modified>2020-10-25T06:01:09.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-10-24T15:26:58.850</Modified>
+      <Modified>2020-10-25T06:14:26.466</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\ClassListPage.xbf">
       <PackagePath>ClassListPage.xbf</PackagePath>
-      <Modified>2020-10-24T15:26:58.850</Modified>
+      <Modified>2020-10-25T06:14:26.466</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\HomePage.xbf">
+      <PackagePath>HomePage.xbf</PackagePath>
+      <Modified>2020-10-25T06:14:26.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\IndivClassPage.xbf">
       <PackagePath>IndivClassPage.xbf</PackagePath>
-      <Modified>2020-10-24T15:26:58.851</Modified>
+      <Modified>2020-10-25T06:14:26.467</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-10-24T15:26:58.851</Modified>
+      <Modified>2020-10-25T06:14:26.468</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\PostsPage.xbf">
       <PackagePath>PostsPage.xbf</PackagePath>
-      <Modified>2020-10-24T15:26:58.852</Modified>
+      <Modified>2020-10-25T06:14:26.468</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\RecordingPage.xbf">
       <PackagePath>RecordingPage.xbf</PackagePath>
-      <Modified>2020-10-24T15:26:58.852</Modified>
+      <Modified>2020-10-25T06:14:26.468</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -138,11 +138,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-10-24T15:26:59.565</Modified>
+      <Modified>2020-10-25T05:04:05.047</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\Core\OnlineCoursesProgram.exe">
       <PackagePath>OnlineCoursesProgram.exe</PackagePath>
-      <Modified>2020-10-24T15:27:00.443</Modified>
+      <Modified>2020-10-25T06:14:27.914</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

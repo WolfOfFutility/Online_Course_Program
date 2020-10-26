@@ -23,10 +23,13 @@ namespace OnlineCoursesProgram
     public sealed partial class MainPage : Page
     {
         CourseContent courseContent = new CourseContent();
+        Student student = new Student();
 
         public MainPage()
         {
             this.InitializeComponent();
+            LoadData();
+            mainFrame.Navigate(typeof(HomePage), student);
         }
 
         public byte[] SaveToByteStream(string source)
@@ -40,7 +43,7 @@ namespace OnlineCoursesProgram
             return buffer;
         }
 
-        private void Courses_Click(object sender, RoutedEventArgs e)
+        public void LoadData()
         {
             List<ClassContent> classList = new List<ClassContent>();
             ClassContent c1 = new ClassContent();
@@ -63,18 +66,7 @@ namespace OnlineCoursesProgram
             //c4.ClassName = "Testing creating and viewing a video";
             //classList.Add(c4);
 
-            CourseContent courseContent = new CourseContent();
-            courseContent.CourseName = "Test Course 1";
-            courseContent.CourseCode = "TEST101";
-            courseContent.ClassList = classList;
-            
-            mainFrame.Navigate(typeof(ClassListPage), courseContent);
-        }
-
-        private void Posts_Click(object sender, RoutedEventArgs e)
-        {
             List<Post> postList = new List<Post>();
-
             Post post1 = new Post();
             post1.Author = "Teacher Name 1";
             post1.DatePosted = DateTime.Now;
@@ -87,6 +79,53 @@ namespace OnlineCoursesProgram
 
             postList.Add(post1);
             postList.Add(post2);
+
+            CourseContent courseContent = new CourseContent();
+            courseContent.CourseName = "Test Course 1";
+            courseContent.CourseCode = "TEST101";
+            courseContent.ClassList = classList;
+            courseContent.PostList = postList;
+
+            List<ClassContent> classList1 = new List<ClassContent>();
+            classList1.Add(c1);
+            classList1.Add(c2);
+
+            CourseContent courseContent1 = new CourseContent();
+            courseContent1.ClassList = classList1;
+            courseContent1.CourseName = "Test Course 2";
+            courseContent1.CourseCode = "TEST11022";
+
+            List<Post> postList1 = new List<Post>();
+            postList1.Add(post1);
+
+            courseContent1.PostList = postList1;
+
+            List<CourseContent> courseList = new List<CourseContent>();
+            courseList.Add(courseContent);
+            courseList.Add(courseContent1);
+
+            student.CoursesList = courseList;
+            student.UserID = 123456789;
+            student.Username = "Ceejay";
+        }
+
+        private void Courses_Click(object sender, RoutedEventArgs e)
+        {
+            LoadData();
+            mainFrame.Navigate(typeof(HomePage), student);
+        }
+
+        private void Posts_Click(object sender, RoutedEventArgs e)
+        {
+            List<Post> postList = new List<Post>();
+
+            foreach (CourseContent c in student.CoursesList)
+            {
+                foreach (Post p in c.PostList)
+                {
+                    postList.Add(p);
+                }
+            }
 
             courseContent.PostList = postList;
 

@@ -1,6 +1,5 @@
 WinMetadata\Windows.winmd
 Assets\LockScreenLogo.scale-200.png
-Assets\recorded-video-1.mp4
 Assets\SplashScreen.scale-200.png
 Assets\Square150x150Logo.scale-200.png
 Assets\Square44x44Logo.scale-200.png
@@ -12,6 +11,7 @@ Assets\testvideo3.mp4
 Assets\Wide310x150Logo.scale-200.png
 App.xbf
 ClassListPage.xbf
+HomePage.xbf
 IndivClassPage.xbf
 MainPage.xbf
 OnlineCoursesProgram.xr.xml
