@@ -23,6 +23,7 @@ namespace OnlineCoursesProgram
     /// </summary>
     public sealed partial class PostsPage : Page
     {
+        // Initialising Instance Variables
         CourseContent course = new CourseContent();
         List<Post> postList = new List<Post>();
         public PostsPage()
@@ -30,6 +31,9 @@ namespace OnlineCoursesProgram
             this.InitializeComponent();
         }
 
+        // Handling object passing when the frame navigates
+        // Creates an individual post box, showing who posted it, when, and the post content
+        // A student will see posts made for the courses that they are currently enrolled in
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             course = e.Parameter as CourseContent;

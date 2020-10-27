@@ -27,6 +27,7 @@ namespace OnlineCoursesProgram
             this.InitializeComponent();
         }
 
+        // Handling object passing on frame navigation, loads a list of courses that the student is currently enrolled in
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             Student student = e.Parameter as Student;

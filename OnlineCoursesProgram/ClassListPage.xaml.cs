@@ -23,10 +23,12 @@ using Windows.UI.Xaml.Navigation;
 namespace OnlineCoursesProgram
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// A page that renders a list of classes for the given course
+    /// Each class, when clicked on, will load the related video and information
     /// </summary>
     public sealed partial class ClassListPage : Page
     {
+        // Initialising instance variables
         CourseContent course = new CourseContent();
         List<ClassContent> classList = new List<ClassContent>();
 
@@ -35,6 +37,7 @@ namespace OnlineCoursesProgram
             this.InitializeComponent();
         }
 
+        // Loading a list of all of the classes in the course passed to the page in the navigation function
         public void LoadClasses()
         {
             foreach (ClassContent x in classList)
@@ -52,6 +55,7 @@ namespace OnlineCoursesProgram
             }
         }
 
+        // Handling object passing through navigation function
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             course = e.Parameter as CourseContent;

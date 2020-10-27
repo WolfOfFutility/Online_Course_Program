@@ -29,6 +29,7 @@ namespace OnlineCoursesProgram
     /// </summary>
     public sealed partial class RecordingPage : Page
     {
+        // Initialising Instance Variables
         MediaCapture mediaCapture = new MediaCapture();
         bool isPreviewing = false;
         DisplayRequest displayRequest = new DisplayRequest();
@@ -39,6 +40,7 @@ namespace OnlineCoursesProgram
             this.InitializeComponent();
         }
 
+        // Start recording, requesting access to the camera, and a folder to save it to 
         private async Task StartPreviewAsync()
         {
             if(!isPreviewing)
@@ -90,6 +92,7 @@ namespace OnlineCoursesProgram
 
         }
 
+        // Wipes all storage in the current camera and media playback objects, clears the screen, turns off the camera
         private async Task CleanupCameraAsync()
         {
             if (mediaCapture != null)
@@ -114,24 +117,10 @@ namespace OnlineCoursesProgram
 
         }
 
+        // Handler for when the "Record" button is clicked
         public async void Record_Click(object sender, RoutedEventArgs e)
         {
             StartPreviewAsync();
-            
-            
-
-            //if (isPreviewing)
-            //{
-            //    await _mediaRecording.StopAsync();
-            //    CleanupCameraAsync();
-            //    isPreviewing = false;
-            //}
-            //else
-            //{
-               
-            //}
-            
-            
         }
     }
 }

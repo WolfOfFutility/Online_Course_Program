@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-10-25T06:14:27.927</Modified>
+      <Modified>2020-10-27T04:28:16.875</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\OnlineCoursesProgram.exe">
       <PackagePath>entrypoint\OnlineCoursesProgram.exe</PackagePath>
-      <Modified>2020-10-25T06:14:26.901</Modified>
+      <Modified>2020-10-27T04:28:16.035</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\.nuget\packages\newtonsoft.json\12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -142,7 +142,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\Core\OnlineCoursesProgram.exe">
       <PackagePath>OnlineCoursesProgram.exe</PackagePath>
-      <Modified>2020-10-25T06:14:27.914</Modified>
+      <Modified>2020-10-27T04:28:16.840</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
