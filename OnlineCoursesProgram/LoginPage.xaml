@@ -34,22 +34,19 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Grid.Row="1" Grid.Column="0" Text="Username: " VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25"/>
-                <TextBox x:Name="usernameField" Grid.Row="1" Grid.Column="1" Margin="15"/>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Username: " VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" FontSize="25"/>
+                <TextBox x:Name="usernameField" Grid.Row="0" Grid.Column="1" Margin="15"/>
 
-                <TextBlock Grid.Row="3" Grid.Column="0" Text="Password: " VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25"/>
-                <TextBox x:Name="passwordField" Grid.Row="3" Grid.Column="1" Margin="15"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Password: " VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25"/>
+                <TextBox x:Name="passwordField" Grid.Row="1" Grid.Column="1" Margin="15"/>
 
-                <Button x:Name="loginButton" Content="Login" Grid.Row="6" Grid.Column="1" Margin="20" VerticalAlignment="Stretch" HorizontalAlignment="Right" FontSize="20" Width="150"/>
+                <Button x:Name="loginButton" Content="Login" Grid.Row="3" Grid.Column="1" Margin="20" VerticalAlignment="Stretch" HorizontalAlignment="Right" FontSize="20" Width="150" Click="Login_Click"/>
             </Grid>
         </Grid>
     </Grid>
