@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -28,10 +29,12 @@ namespace OnlineCoursesProgram
     {
         bool isPlaying = false;
         byte[] buffer;
+        DatabaseModel db = new DatabaseModel();
 
         public IndivClassPage()
         {
             this.InitializeComponent();
+            buffer = db.GetClassByID(1).Source;
         }
 
         // Play/Pause video playback
@@ -77,7 +80,7 @@ namespace OnlineCoursesProgram
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             ClassContent cc = e.Parameter as ClassContent;
-            buffer = cc.Source;
+            //buffer = cc.Source;
             lessonTitle.Text = cc.ClassName;
 
             LoadFromByteStream();

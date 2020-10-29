@@ -124,6 +124,7 @@
       <DependentUpon>ClassListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="CourseContent.cs" />
+    <Compile Include="DatabaseModel.cs" />
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>

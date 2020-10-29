@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -31,6 +32,7 @@ namespace OnlineCoursesProgram
         // Initialising instance variables
         CourseContent course = new CourseContent();
         List<ClassContent> classList = new List<ClassContent>();
+
 
         public ClassListPage()
         {
@@ -49,7 +51,7 @@ namespace OnlineCoursesProgram
                 b.Foreground = new SolidColorBrush(Colors.Black);
                 b.Background = new SolidColorBrush(Colors.LightBlue);
                 b.Content = course.CourseCode + " - " + x.ClassName;
-                b.Click += (s, e) => { subFrame.Navigate(typeof(IndivClassPage), x); };
+                b.Click += (s, e) => { subFrame.Navigate(typeof(IndivClassPage), x, new SlideNavigationTransitionInfo() { Effect = SlideNavigationTransitionEffect.FromRight }); };
 
                 classListPanel.Children.Add(b);
             }

@@ -8,7 +8,9 @@ namespace OnlineCoursesProgram
 {
     class ClassContent
     {
-        public byte[] Source { get; set; }
+        public int ClassID { get; set; }
         public string ClassName { get; set; }
+
+        public byte[] Source { get; set; }
     }
 }
