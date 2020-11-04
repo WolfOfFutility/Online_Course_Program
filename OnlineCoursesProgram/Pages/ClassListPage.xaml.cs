@@ -46,7 +46,8 @@ namespace OnlineCoursesProgram
             foreach (ClassContent x in await db.GetCourseClassList(course.CourseID))
             {
                 Button b = new Button();
-                b.Margin = new Thickness(0, 0, 0, 1);
+                b.Margin = new Thickness(1, 0.5, 1, 0.5);
+                //b.CornerRadius = new CornerRadius(10);
                 b.HorizontalAlignment = HorizontalAlignment.Stretch;
                 b.HorizontalContentAlignment = HorizontalAlignment.Left + 30;
                 b.Height = 50;
@@ -63,7 +64,6 @@ namespace OnlineCoursesProgram
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             course = e.Parameter as CourseContent;
-            classList = course.ClassList;
 
             LoadClasses();
 

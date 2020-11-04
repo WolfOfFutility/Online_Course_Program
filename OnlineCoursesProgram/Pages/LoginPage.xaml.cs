@@ -42,7 +42,7 @@ namespace OnlineCoursesProgram
         public void Login_Click(object sender, RoutedEventArgs e)
         {
             User user = new User();
-            user = db.CheckLoginDetails(usernameField.Text, passwordField.Text);
+            user = db.CheckLoginDetails(usernameField.Text, passwordField.Password);
 
             if(user == null)
             {

@@ -433,6 +433,39 @@ namespace OnlineCoursesProgram
             System.Diagnostics.Debug.WriteLine("Courses Added: " + affectedRows);
         }
 
+        public async Task<List<CourseContent>> GetAllCourses()
+        {
+            List<CourseContent> courseList = new List<CourseContent>();
+            List<int> courseIdList = new List<int>();
+
+            command = new SqlCommand("SELECT * From Courses", conn);
+
+            reader = command.ExecuteReader();
+
+            try
+            {
+                while (reader.Read())
+                {
+                    courseIdList.Add((int)reader["CourseID"]);
+                }
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e);
+            }
+            finally
+            {
+                reader.Close();
+            }
+
+            foreach (int x in courseIdList)
+            {
+                courseList.Add(await GetCourseByID(x));
+            }
+
+            return courseList;
+        }
+
         public void Close()
         {
             conn.Close();

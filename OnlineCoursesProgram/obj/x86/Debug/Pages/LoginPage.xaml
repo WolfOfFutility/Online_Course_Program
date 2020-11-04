@@ -44,7 +44,7 @@
                 <TextBox x:ConnectionId='2' x:Name="usernameField" Grid.Row="0" Grid.Column="1" Margin="15"/>
 
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="Password: " VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25"/>
-                <TextBox x:ConnectionId='3' x:Name="passwordField" Grid.Row="1" Grid.Column="1" Margin="15"/>
+                <PasswordBox x:ConnectionId='3' x:Name="passwordField" Grid.Row="1" Grid.Column="1" Margin="15" VerticalContentAlignment="Center"/>
 
                 <Button x:ConnectionId='4' x:Name="loginButton" Content="Login" Grid.Row="3" Grid.Column="1" Margin="20" VerticalAlignment="Stretch" HorizontalAlignment="Right" FontSize="20" Width="150"                    />
             </Grid>

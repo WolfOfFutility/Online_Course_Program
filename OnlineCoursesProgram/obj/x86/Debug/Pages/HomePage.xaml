@@ -13,7 +13,8 @@
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="8*" />
         </Grid.ColumnDefinitions>
-        <StackPanel x:ConnectionId='2' x:Name="courseListPanel" Grid.Column="0" Orientation="Vertical" BorderBrush="#CCC" BorderThickness="0,0,1,0">
+        <StackPanel x:ConnectionId='2' x:Name="courseListPanel" Grid.Column="0" Orientation="Vertical" BorderBrush="#CCC" BorderThickness="0,0,1,0" Background="#444">
+            <TextBlock Text="Your Enrolled Courses: " Margin="5, 20, 0, 20" Foreground="White" FontSize="20"/>
         </StackPanel>
         <Frame x:ConnectionId='3' x:Name="subFrame1"  Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
     </Grid>

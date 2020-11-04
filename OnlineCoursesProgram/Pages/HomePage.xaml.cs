@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlineCoursesProgram.Pages;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -31,30 +32,22 @@ namespace OnlineCoursesProgram
         // Handling object passing on frame navigation, loads a list of courses that the student is currently enrolled in
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if(e.Parameter is Student)
-            {
-                Student student = e.Parameter as Student;
-                foreach (CourseContent c in await db.ViewAllUserCourses((int)student.UserID))
-                {
-                    Button b = new Button();
-                    b.Content = c.CourseName;
-                    b.HorizontalAlignment = HorizontalAlignment.Stretch;
-                    b.Height = 100;
-                    b.Background = new SolidColorBrush(Windows.UI.Colors.DodgerBlue);
-                    b.Margin = new Thickness(0, 0, 0, 1);
-                    b.Click += (s, n) => { subFrame1.Navigate(typeof(ClassListPage), c); };
+            subFrame1.Navigate(typeof(EnrollPromptsPage));
 
-                    courseListPanel.Children.Add(b);
-                }
-            }
-            else
+            Student student = e.Parameter as Student;
+            foreach (CourseContent c in await db.ViewAllUserCourses((int)student.UserID))
             {
-                courseListPanel.Visibility = Visibility.Collapsed;
-                //TextBlock testingText = new TextBlock();
-                //testingText.Text = "Teacher List";
+                Button b = new Button();
+                b.Content = c.CourseName;
+                b.HorizontalAlignment = HorizontalAlignment.Stretch;
+                b.Height = 100;
+                b.Background = new SolidColorBrush(Windows.UI.Colors.DodgerBlue);
+                b.Margin = new Thickness(1, 0.5, 1, 0.5);
+                b.Click += (s, n) => { subFrame1.Navigate(typeof(ClassListPage), c); };
 
-                //courseListPanel.Children.Add(testingText);
+                courseListPanel.Children.Add(b);
             }
+
             base.OnNavigatedTo(e);
         }
 
