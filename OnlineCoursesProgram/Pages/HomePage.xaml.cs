@@ -32,9 +32,9 @@ namespace OnlineCoursesProgram
         // Handling object passing on frame navigation, loads a list of courses that the student is currently enrolled in
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            subFrame1.Navigate(typeof(EnrollPromptsPage));
-
             Student student = e.Parameter as Student;
+            subFrame1.Navigate(typeof(EnrollPromptsPage), student);
+
             foreach (CourseContent c in await db.ViewAllUserCourses((int)student.UserID))
             {
                 Button b = new Button();

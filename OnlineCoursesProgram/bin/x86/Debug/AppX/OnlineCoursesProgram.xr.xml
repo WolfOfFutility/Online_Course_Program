@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="CourseName" />
+    <RootPropertyPathName Name="CourseCode" />
+  </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
@@ -62,8 +66,13 @@
       <RootEvent Name="TextChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="SelectionMode" />
+      <RootProperty Name="IsItemClickEnabled" />
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="ItemTemplate" />
+      <RootEvent Name="SelectionChanged" />
+      <RootEvent Name="ItemClick" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
@@ -71,6 +80,7 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontWeight" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
@@ -78,6 +88,10 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="OnlineCoursesProgram.Pages.EnrollPromptsPage" />
     <RootType FullName="OnlineCoursesProgram.HomePage" />
     <RootType FullName="Windows.UI.Xaml.Controls.MediaPlayerElement">
@@ -95,6 +109,7 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="OnlineCoursesProgram.IndivClassPage" />
+    <RootType FullName="OnlineCoursesProgram.Pages.IndivEnrollPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalContentAlignment" />

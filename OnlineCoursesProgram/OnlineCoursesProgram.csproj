@@ -142,6 +142,9 @@
     <Compile Include="Pages\IndivClassPage.xaml.cs">
       <DependentUpon>IndivClassPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\IndivEnrollPage.xaml.cs">
+      <DependentUpon>IndivEnrollPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -199,6 +202,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\IndivClassPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\IndivEnrollPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

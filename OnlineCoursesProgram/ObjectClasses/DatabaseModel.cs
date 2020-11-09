@@ -66,6 +66,32 @@ namespace OnlineCoursesProgram
             return user;
         }
 
+        // returns a Student objects according to student ID
+        public async Task<Student> GetStudentByID(int userID)
+        {
+            Student student = new Student();
+
+            command = new SqlCommand("SELECT * FROM Users WHERE UserID=@userID", conn);
+            command.Parameters.AddWithValue("@userID", (long)userID);
+            reader = command.ExecuteReader();
+
+            try
+            {
+                while (reader.Read())
+                {
+                    System.Diagnostics.Debug.WriteLine("{0}", reader["UserID"]);
+                    student.UserID = (int)reader["UserID"];
+                    student.Username = reader["DisplayName"].ToString();
+                }
+            }
+            finally
+            {
+                reader.Close();
+            }
+
+            return student;
+        }
+
         // Creates a new user entity in the database
         public void CreateNewUser(int userID, string username, string password, string displayName, string role)
         {
@@ -139,15 +165,16 @@ namespace OnlineCoursesProgram
         }
 
         // Links a course with a user
-        public void EnrollInCourse(int enrolledID, int userID, int courseID)
+        public async Task<int> EnrollInCourse(int userID, int courseID)
         {
-            command = new SqlCommand("INSERT INTO Enrolled (EnrolledID, UserID, CourseID) VALUES (@enrolledID, @userID, @courseID)", conn);
-            command.Parameters.AddWithValue("@enrolledID", enrolledID);
+            command = new SqlCommand("INSERT INTO Enrolled (UserID, CourseID) VALUES (@userID, @courseID)", conn);
             command.Parameters.AddWithValue("@userID", userID);
             command.Parameters.AddWithValue("@courseID", courseID);
 
             int affectedRows = command.ExecuteNonQuery();
-            System.Diagnostics.Debug.WriteLine(affectedRows);
+            System.Diagnostics.Debug.WriteLine("Inserted " + affectedRows + " new enrolled row");
+
+            return affectedRows;
         }
 
         // Links a class with a course

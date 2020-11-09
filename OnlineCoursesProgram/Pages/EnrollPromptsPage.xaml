@@ -12,7 +12,16 @@
         <ScrollViewer VerticalScrollMode="Enabled" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <StackPanel Orientation="Vertical">
                 <TextBox x:Name="searchField" Width="200" HorizontalAlignment="Left" Margin="20" Header="Search Courses: " VerticalContentAlignment="Center" HorizontalContentAlignment="Left" TextChanged="OnSearchChange"/>
-                <ListView x:Name="searchResultList" ItemsSource="{x:Bind listOfResults}" Margin="20" />
+                <ListView x:Name="searchResultList" SelectionMode="Single" SelectionChanged="ListSelectionChanged" IsItemClickEnabled="True" ItemClick="Handle_Enroll" ItemsSource="{x:Bind listOfResults}" Margin="20">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding CourseCode}" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding CourseName}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
                 <TextBlock Text="Courses You Might Like: " Margin="20" FontSize="18"/>
                 <ScrollViewer Height="200" Margin="20, 0, 0, 0" HorizontalScrollMode="Enabled" VerticalScrollMode="Disabled" VerticalContentAlignment="Center">
                     <StackPanel Orientation="Horizontal">
