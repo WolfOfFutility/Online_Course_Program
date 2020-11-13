@@ -28,9 +28,9 @@ namespace OnlineCoursesProgram
     /// 
     public sealed partial class IndivClassPage : Page
     {
-        bool isPlaying = false;
-        byte[] buffer;
-        DatabaseModel db = new DatabaseModel();
+        private bool isPlaying = false;
+        private byte[] buffer;
+        private DatabaseModel db = new DatabaseModel();
 
         public IndivClassPage()
         {
@@ -67,7 +67,7 @@ namespace OnlineCoursesProgram
         }
 
         // Load video from the byte stream stored in the object class
-        public async void LoadFromByteStream()
+        private async void LoadFromByteStream()
         {
             Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
             Windows.Storage.StorageFile sampleFile = await storageFolder.CreateFileAsync("vid.mp4", Windows.Storage.CreationCollisionOption.GenerateUniqueName);

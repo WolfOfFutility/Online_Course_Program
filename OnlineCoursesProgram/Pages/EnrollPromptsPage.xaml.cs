@@ -21,25 +21,26 @@ namespace OnlineCoursesProgram.Pages
     public sealed partial class EnrollPromptsPage : Page
     {
 
-        List<CourseContent> listOfResults = new List<CourseContent>();
-        List<CourseContent> courseList = new List<CourseContent>();
-        Student student = new Student();
-
-        DatabaseModel db = new DatabaseModel();
-
-        CourseContent selectedCourse = new CourseContent();
+        private List<CourseContent> listOfResults = new List<CourseContent>();
+        private List<CourseContent> courseList = new List<CourseContent>();
+        private Student student = new Student();
+        private DatabaseModel db = new DatabaseModel();
+        private CourseContent selectedCourse = new CourseContent();
 
         public EnrollPromptsPage()
         {
             this.InitializeComponent();
         }
 
+        // Handles the item selection in the list of courses from search
         public void ListSelectionChanged(object sender, RoutedEventArgs e)
         {
             selectedCourse = new CourseContent();
             selectedCourse = (CourseContent)searchResultList.SelectedItem;
         } 
 
+        // Handles the navigation based on course selection in the list
+        // **NOTE** need to improve list selection so that it is selected with one click
         public void Handle_Enroll(object sender, RoutedEventArgs e)
         {
             CourseContent selected = new CourseContent();

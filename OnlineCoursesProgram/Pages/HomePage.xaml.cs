@@ -23,7 +23,8 @@ namespace OnlineCoursesProgram
     /// </summary>
     public sealed partial class HomePage : Page
     {
-        DatabaseModel db = new DatabaseModel();
+        private DatabaseModel db = new DatabaseModel();
+
         public HomePage()
         {
             this.InitializeComponent();
@@ -40,7 +41,7 @@ namespace OnlineCoursesProgram
                 Button b = new Button();
                 b.Content = c.CourseName;
                 b.HorizontalAlignment = HorizontalAlignment.Stretch;
-                b.Height = 100;
+                b.Height = 50;
                 b.Background = new SolidColorBrush(Windows.UI.Colors.DodgerBlue);
                 b.Margin = new Thickness(1, 0.5, 1, 0.5);
                 b.Click += (s, n) => { subFrame1.Navigate(typeof(ClassListPage), c); };

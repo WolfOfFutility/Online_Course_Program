@@ -34,14 +34,13 @@ namespace OnlineCoursesProgram
     public sealed partial class RecordingPage : Page
     {
         // Initialising Instance Variables
-        MediaCapture mediaCapture = new MediaCapture();
-        bool isPreviewing = false;
-        DisplayRequest displayRequest = new DisplayRequest();
-        LowLagMediaRecording _mediaRecording;
-        string newFilePath = "";
-        Teacher teacher = new Teacher();
-
-        DatabaseModel db = new DatabaseModel();
+        private MediaCapture mediaCapture = new MediaCapture();
+        private bool isPreviewing = false;
+        private DisplayRequest displayRequest = new DisplayRequest();
+        private LowLagMediaRecording _mediaRecording;
+        private string newFilePath = "";
+        private Teacher teacher = new Teacher();
+        private DatabaseModel db = new DatabaseModel();
 
         public RecordingPage()
         {

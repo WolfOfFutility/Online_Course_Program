@@ -26,15 +26,11 @@ namespace OnlineCoursesProgram
     /// </summary>
     public sealed partial class LoginPage : Page
     {
-        DatabaseModel db = new DatabaseModel();
+        private DatabaseModel db = new DatabaseModel();
 
         public LoginPage()
         {
             this.InitializeComponent();
-            //db.CreateNewUser(4, "Test1", "pass", "TestingAccount", "Student");
-            //db.CreateNewClass(1, "Testing Class", SaveToByteStream(@"Assets/testvideo3.mp4"));
-            //db.CreateNewCourse(1, "Test110111", "Testing Course");
-            //db.ViewAllUserCourses(1);
         }
 
         // Handler for when the login button is clicked.

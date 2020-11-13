@@ -117,6 +117,15 @@
     <RootType FullName="OnlineCoursesProgram.LoginPage" />
     <RootType FullName="OnlineCoursesProgram.MainDirectoryPage" />
     <RootType FullName="OnlineCoursesProgram.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectionMode" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="ItemTemplate" />
+      <RootEvent Name="SelectionChanged" />
+    </RootType>
+    <RootType FullName="OnlineCoursesProgram.Pages.ManageCoursesPage" />
     <RootType FullName="OnlineCoursesProgram.PostsPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.CaptureElement">
       <RootProperty Name="VerticalAlignment" />

@@ -30,10 +30,8 @@ namespace OnlineCoursesProgram
     public sealed partial class ClassListPage : Page
     {
         // Initialising instance variables
-        CourseContent course = new CourseContent();
-        List<ClassContent> classList = new List<ClassContent>();
-        DatabaseModel db = new DatabaseModel();
-
+        private List<ClassContent> classList = new List<ClassContent>();
+        private DatabaseModel db = new DatabaseModel();
 
         public ClassListPage()
         {
@@ -41,7 +39,7 @@ namespace OnlineCoursesProgram
         }
 
         // Loading a list of all of the classes in the course passed to the page in the navigation function
-        public async void LoadClasses()
+        private async void LoadClasses(CourseContent course)
         {
             foreach (ClassContent x in await db.GetCourseClassList(course.CourseID))
             {
@@ -63,9 +61,9 @@ namespace OnlineCoursesProgram
         // Handling object passing through navigation function
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            CourseContent course = new CourseContent();
             course = e.Parameter as CourseContent;
-
-            LoadClasses();
+            LoadClasses(course);
 
             base.OnNavigatedTo(e);
         }

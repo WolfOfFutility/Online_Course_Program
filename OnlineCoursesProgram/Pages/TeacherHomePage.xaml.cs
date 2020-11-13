@@ -18,8 +18,8 @@ namespace OnlineCoursesProgram
     public sealed partial class TeacherHomePage : Page
     {
 
-        DatabaseModel db = new DatabaseModel();
-        Teacher teacher = new Teacher();
+        private DatabaseModel db = new DatabaseModel();
+        private Teacher teacher = new Teacher();
 
         public TeacherHomePage()
         {

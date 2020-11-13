@@ -24,10 +24,9 @@ namespace OnlineCoursesProgram
     public sealed partial class PostsPage : Page
     {
         // Initialising Instance Variables
-        CourseContent course = new CourseContent();
-        List<Post> postList = new List<Post>();
-
-        DatabaseModel db = new DatabaseModel();
+        private CourseContent course = new CourseContent();
+        private List<Post> postList = new List<Post>();
+        private DatabaseModel db = new DatabaseModel();
 
         public PostsPage()
         {

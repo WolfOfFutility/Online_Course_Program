@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OnlineCoursesProgram.Pages;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,12 +24,12 @@ namespace OnlineCoursesProgram
     /// </summary>
     public sealed partial class MainDirectoryPage : Page
     {
-        CourseContent courseContent = new CourseContent();
-        Student student = new Student();
-        Teacher teacher = new Teacher();
-        DatabaseModel db = new DatabaseModel();
-        bool isStudent = false;
-        bool isTeacher = false;
+        private CourseContent courseContent = new CourseContent();
+        private Student student = new Student();
+        private Teacher teacher = new Teacher();
+        private DatabaseModel db = new DatabaseModel();
+        private bool isStudent = false;
+        private bool isTeacher = false;
 
         public MainDirectoryPage()
         {
@@ -90,7 +91,7 @@ namespace OnlineCoursesProgram
             manageCoursesButton.Content = "Manage Courses";
             manageCoursesButton.Click += (s, e) =>
             {
-                System.Diagnostics.Debug.WriteLine("Manage Courses Button");
+                Manage_Courses_Click(s, e);
             };
 
             menuButtonPanel.Children.Add(recordButton);
@@ -162,6 +163,15 @@ namespace OnlineCoursesProgram
         {
             System.Diagnostics.Debug.WriteLine("User ID At Directory Page: " + teacher.UserID);
             mainFrame.Navigate(typeof(RecordingPage), teacher);
+        }
+
+        // Handler for the "Manage Courses" menu button
+        private void Manage_Courses_Click(object sender, RoutedEventArgs e)
+        {
+            if(!isStudent)
+            {
+                mainFrame.Navigate(typeof(ManageCoursesPage), teacher);
+            }
         }
     }
 }
