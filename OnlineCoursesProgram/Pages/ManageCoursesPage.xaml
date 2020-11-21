@@ -9,11 +9,18 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel Background="#333">
-        <TextBlock Text="Your Courses: " Margin="20" FontSize="20"/>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Your Courses: " Margin="20" FontSize="20"/>
+            <Button Content="Create New Course" Margin="20" Click="NavigateToCreateCourse"/>
+        </StackPanel>
+
         <ListBox x:Name="ownedCoursesListBox" ItemsSource="{x:Bind listOfOwnedCourses}" SelectionMode="Single" SelectionChanged="ChangedListSelection" Margin="20" HorizontalAlignment="Stretch">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding CourseName}" />
+                    <StackPanel>
+                        <TextBlock Text="{Binding CourseCode}" FontWeight="Bold" Margin="0, 0, 0, 5"/>
+                        <TextBlock Text="{Binding CourseName}" />
+                    </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

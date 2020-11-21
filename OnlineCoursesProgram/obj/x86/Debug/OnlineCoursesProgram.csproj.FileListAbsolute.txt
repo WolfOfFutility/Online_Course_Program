@@ -102,3 +102,13 @@ C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\Onli
 C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\obj\x86\Debug\Pages\ManageCoursesPage.g.cs
 C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\obj\x86\Debug\Pages\ManageCoursesPage.xaml
 C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\obj\x86\Debug\Pages\ManageCoursesPage.xbf
+C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\Pages\CreateNewCoursePage.xbf
+C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\obj\x86\Debug\Pages\CreateNewCoursePage.g.i.cs
+C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\obj\x86\Debug\Pages\CreateNewCoursePage.g.cs
+C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\obj\x86\Debug\Pages\CreateNewCoursePage.xaml
+C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\obj\x86\Debug\Pages\CreateNewCoursePage.xbf
+C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\Pages\ManagePostsPage.xbf
+C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\obj\x86\Debug\Pages\ManagePostsPage.g.i.cs
+C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\obj\x86\Debug\Pages\ManagePostsPage.g.cs
+C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\obj\x86\Debug\Pages\ManagePostsPage.xaml
+C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\obj\x86\Debug\Pages\ManagePostsPage.xbf

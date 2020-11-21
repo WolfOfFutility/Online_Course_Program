@@ -152,16 +152,32 @@ namespace OnlineCoursesProgram
         }
 
         // creates a new course entity in the database
-        public void CreateNewCourse(int courseID, string courseCode, string courseName)
+        public async Task<int> CreateNewCourse(string courseCode, string courseName)
         {
-            command = new SqlCommand("INSERT INTO Courses (CourseID, CourseCode, CourseName) VALUES (@courseID, @courseCode, @courseName)", conn);
-            command.Parameters.AddWithValue("@courseID", courseID);
+            command = new SqlCommand("INSERT INTO Courses (CourseCode, CourseName) OUTPUT INSERTED.CourseID VALUES (@courseCode, @courseName)", conn);
             command.Parameters.AddWithValue("@courseCode", courseCode);
             command.Parameters.AddWithValue("@courseName", courseName);
 
-            int affectedRows = command.ExecuteNonQuery();
+            int newCourseID = 0;
+            reader = command.ExecuteReader();
 
-            System.Diagnostics.Debug.WriteLine(affectedRows);
+            try
+            {
+                while (reader.Read())
+                {
+                    newCourseID = (int)reader["CourseID"];
+                }
+            }
+            catch (Exception x)
+            {
+                System.Diagnostics.Debug.WriteLine(x);
+            }
+            finally
+            {
+                reader.Close();
+            }
+
+            return newCourseID;
         }
 
         // Links a course with a user
@@ -189,13 +205,13 @@ namespace OnlineCoursesProgram
         }
 
         // creates a new post entity in the database
-        public void CreateNewPost(int postID, string author, string content, string datePosted)
+        public void CreateNewPost(string author, string content, string datePosted, int authorID)
         {
-            command = new SqlCommand("INSERT INTO Posts (PostID, Author, DatePosted, Content) VALUES (@postID, @author, @datePosted, @content)", conn);
-            command.Parameters.AddWithValue("@postID", postID);
+            command = new SqlCommand("INSERT INTO Posts (Author, DatePosted, Content, AuthorID) VALUES (@author, @datePosted, @content, @authorID)", conn);
             command.Parameters.AddWithValue("@author", author);
             command.Parameters.AddWithValue("@datePosted", datePosted);
             command.Parameters.AddWithValue("@content", content);
+            command.Parameters.AddWithValue("@authorID", authorID);
 
             int affectedRows = command.ExecuteNonQuery();
             System.Diagnostics.Debug.WriteLine(affectedRows);
@@ -491,6 +507,29 @@ namespace OnlineCoursesProgram
             }
 
             return courseList;
+        }
+
+        public async Task<List<Post>> GetAllUsersPosts(int userID)
+        {
+            List<Post> usersPosts = new List<Post>();
+            command = new SqlCommand("SELECT * FROM Posts WHERE AuthorID = @userID", conn);
+            command.Parameters.AddWithValue("@userID", userID);
+
+            reader = command.ExecuteReader();
+
+            try
+            {
+                while(reader.Read())
+                {
+                    usersPosts.Add(new Post(reader["Author"].ToString(), Convert.ToDateTime(reader["DatePosted"]), reader["Content"].ToString()));
+                }
+            }
+            catch(Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e);
+            }
+
+            return usersPosts;
         }
 
         public void Close()

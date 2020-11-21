@@ -20,14 +20,10 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace OnlineCoursesProgram
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
-    /// 
+
     // **NOTE** Functionality needs to be added to import existing files in as class videos
     // **NOTE** Functionality needs to be added to live stream videos, and then saving 
     // them after the fact
@@ -41,6 +37,7 @@ namespace OnlineCoursesProgram
         private string newFilePath = "";
         private Teacher teacher = new Teacher();
         private DatabaseModel db = new DatabaseModel();
+        private List<CourseContent> listOfOwnedCourses = new List<CourseContent>();
 
         public RecordingPage()
         {
@@ -137,7 +134,7 @@ namespace OnlineCoursesProgram
             try
             {
                 int newClassID = await db.CreateNewClass(newClassName.Text, db.SaveToByteStream(newFilePath));
-                await db.AddClassToCourse((int)selectedCourseCombo.SelectedValue, newClassID);
+                await db.AddClassToCourse((int)((CourseContent)selectedCourseCombo.SelectedItem).CourseID, newClassID);
             }
             catch(Exception x)
             {
@@ -150,18 +147,14 @@ namespace OnlineCoursesProgram
         // Loads all courses that the user is responsible for into the combo box
         private async void LoadCoursesIntoCombo()
         {
-            selectedCourseCombo.DisplayMemberPath = "Text";
-            selectedCourseCombo.SelectedValuePath = "Value";
-
-            foreach (CourseContent c in await db.GetAllAssignedCourses((int)teacher.UserID))
-            {
-                selectedCourseCombo.Items.Add(new { Text = c.CourseName, Value = c.CourseID });
-            }
+            listOfOwnedCourses = await db.GetAllAssignedCourses((int)teacher.UserID);
+            selectedCourseCombo.ItemsSource = null;
+            selectedCourseCombo.ItemsSource = listOfOwnedCourses;
         }
 
         // Overrides the on navigated to function to take an object passed from the previous page
         // and loads the combo box with all of the available courses for the user
-        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             teacher = e.Parameter as Teacher;
             LoadCoursesIntoCombo();

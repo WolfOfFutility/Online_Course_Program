@@ -3,6 +3,9 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="CourseName" />
     <RootPropertyPathName Name="CourseCode" />
+    <RootPropertyPathName Name="Author" />
+    <RootPropertyPathName Name="TextContent" />
+    <RootPropertyPathName Name="DatePosted" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -45,6 +48,37 @@
       <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="OnlineCoursesProgram.ClassListPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="TextAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Header" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalContentAlignment" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootEvent Name="TextChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="FontSize" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="OnlineCoursesProgram.Pages.CreateNewCoursePage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="VerticalScrollMode" />
       <RootProperty Name="VerticalAlignment" />
@@ -56,15 +90,6 @@
       <RootProperty Name="VerticalContentAlignment" />
       <RootProperty Name="Background" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Width" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Header" />
-      <RootProperty Name="VerticalContentAlignment" />
-      <RootProperty Name="HorizontalContentAlignment" />
-      <RootEvent Name="TextChanged" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="SelectionMode" />
       <RootProperty Name="IsItemClickEnabled" />
@@ -73,16 +98,6 @@
       <RootProperty Name="ItemTemplate" />
       <RootEvent Name="SelectionChanged" />
       <RootEvent Name="ItemClick" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Text" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="TextAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="FontWeight" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
@@ -97,16 +112,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.MediaPlayerElement">
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Width" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="FontSize" />
-      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="OnlineCoursesProgram.IndivClassPage" />
     <RootType FullName="OnlineCoursesProgram.Pages.IndivEnrollPage" />
@@ -126,6 +131,7 @@
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="OnlineCoursesProgram.Pages.ManageCoursesPage" />
+    <RootType FullName="OnlineCoursesProgram.Pages.ManagePostsPage" />
     <RootType FullName="OnlineCoursesProgram.PostsPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.CaptureElement">
       <RootProperty Name="VerticalAlignment" />
@@ -137,6 +143,9 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Header" />
       <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="OnlineCoursesProgram.RecordingPage" />
     <RootType FullName="OnlineCoursesProgram.TeacherHomePage" />

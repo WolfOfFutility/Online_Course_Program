@@ -133,6 +133,12 @@
     </Compile>
     <Compile Include="ObjectClasses\CourseContent.cs" />
     <Compile Include="ObjectClasses\DatabaseModel.cs" />
+    <Compile Include="Pages\CreateNewCoursePage.xaml.cs">
+      <DependentUpon>CreateNewCoursePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CreateNewPostPage.xaml.cs">
+      <DependentUpon>CreateNewPostPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\EnrollPromptsPage.xaml.cs">
       <DependentUpon>EnrollPromptsPage.xaml</DependentUpon>
     </Compile>
@@ -157,6 +163,9 @@
     <Compile Include="ObjectClasses\Post.cs" />
     <Compile Include="Pages\ManageCoursesPage.xaml.cs">
       <DependentUpon>ManageCoursesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManagePostsPage.xaml.cs">
+      <DependentUpon>ManagePostsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PostsPage.xaml.cs">
       <DependentUpon>PostsPage.xaml</DependentUpon>
@@ -196,6 +205,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\CreateNewCoursePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\CreateNewPostPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\EnrollPromptsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -225,6 +242,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\ManageCoursesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ManagePostsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

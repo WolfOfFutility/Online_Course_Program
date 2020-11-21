@@ -9,6 +9,7 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 OnlineCoursesProgram.xr.xml
 Pages\ClassListPage.xbf
+Pages\CreateNewCoursePage.xbf
 Pages\EnrollPromptsPage.xbf
 Pages\HomePage.xbf
 Pages\IndivClassPage.xbf
@@ -17,6 +18,7 @@ Pages\LoginPage.xbf
 Pages\MainDirectoryPage.xbf
 Pages\MainPage.xbf
 Pages\ManageCoursesPage.xbf
+Pages\ManagePostsPage.xbf
 Pages\PostsPage.xbf
 Pages\RecordingPage.xbf
 Pages\TeacherHomePage.xbf

@@ -79,6 +79,9 @@
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\Pages\ClassListPage.xbf">
       <PackagePath>Pages\ClassListPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\Pages\CreateNewCoursePage.xbf">
+      <PackagePath>Pages\CreateNewCoursePage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\Pages\EnrollPromptsPage.xbf">
       <PackagePath>Pages\EnrollPromptsPage.xbf</PackagePath>
     </AppxPackagedFile>
@@ -102,6 +105,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\Pages\ManageCoursesPage.xbf">
       <PackagePath>Pages\ManageCoursesPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\Pages\ManagePostsPage.xbf">
+      <PackagePath>Pages\ManagePostsPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ceeji\Documents\Personal Coding Projects\.Net\OnlineCoursesProgram\OnlineCoursesProgramApp\OnlineCoursesProgram\bin\x86\Debug\Pages\PostsPage.xbf">
       <PackagePath>Pages\PostsPage.xbf</PackagePath>

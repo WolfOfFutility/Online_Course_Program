@@ -15,13 +15,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace OnlineCoursesProgram
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+
     public sealed partial class MainDirectoryPage : Page
     {
         private CourseContent courseContent = new CourseContent();
@@ -81,7 +77,7 @@ namespace OnlineCoursesProgram
             newPostButton.Content = "Manage Posts";
             newPostButton.Click += (s, e) =>
             {
-                System.Diagnostics.Debug.WriteLine("New Post Button Clicked");
+                Manage_Posts_Click(s, e);
             };
 
             // Manage Courses Button
@@ -171,6 +167,15 @@ namespace OnlineCoursesProgram
             if(!isStudent)
             {
                 mainFrame.Navigate(typeof(ManageCoursesPage), teacher);
+            }
+        }
+
+        // handler for the clicking on the "manage posts" button
+        private void Manage_Posts_Click(object sender, RoutedEventArgs e)
+        {
+            if(!isStudent)
+            {
+                mainFrame.Navigate(typeof(ManagePostsPage), teacher);
             }
         }
     }

@@ -13,13 +13,10 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace OnlineCoursesProgram.Pages
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+
     public sealed partial class ManageCoursesPage : Page
     {
         private DatabaseModel db = new DatabaseModel();
@@ -31,6 +28,7 @@ namespace OnlineCoursesProgram.Pages
             this.InitializeComponent();
         }
 
+        // Handles the list selection being changed 
         public void ChangedListSelection(object sender, RoutedEventArgs e)
         {
             CourseContent selectedCourse = new CourseContent();
@@ -38,11 +36,19 @@ namespace OnlineCoursesProgram.Pages
             System.Diagnostics.Debug.WriteLine(selectedCourse.CourseName);
         }
 
+        // loads all of the courses owned by the current user
         private async void LoadOwnedCourses(int userID)
         {
-            listOfOwnedCourses = await db.GetAllCourses();
+            listOfOwnedCourses = await db.GetAllAssignedCourses((int)teacher.UserID);
         }
 
+        // handles the button click for "Create new course"  button
+        public void NavigateToCreateCourse(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CreateNewCoursePage), teacher);
+        }
+
+        // handles being navigated to in frame, takes neccesary user data
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             teacher = e.Parameter as Teacher;
@@ -51,6 +57,7 @@ namespace OnlineCoursesProgram.Pages
             base.OnNavigatedTo(e);
         }
 
+        // handles navigation from, handles clean up of database connection
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             db.Close();

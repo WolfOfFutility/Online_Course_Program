@@ -13,5 +13,17 @@ namespace OnlineCoursesProgram
         public string CourseCode { get; set; }
         public List<ClassContent> ClassList { get; set; }
         public List<Post> PostList { get; set; }
+
+        public CourseContent()
+        {
+
+        }
+
+        public CourseContent(int cid, string cn, string cc)
+        {
+            this.CourseID = cid;
+            this.CourseName = cn;
+            this.CourseCode = cc;
+        }
     }
 }
