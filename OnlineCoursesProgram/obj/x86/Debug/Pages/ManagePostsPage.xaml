@@ -11,10 +11,10 @@
     <StackPanel Background="#333">
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Your Posts" Margin="20"/>
-            <Button Margin="20" Content="Add New Post" Click="AddNewPostClick"/>
+            <Button x:ConnectionId='4' Margin="20" Content="Add New Post"                        />
         </StackPanel>
         
-        <ListBox x:Name="postListBox" Margin="20" ItemsSource="listOfPosts">
+        <ListBox x:ConnectionId='2' x:Name="postListBox" Margin="20" ItemsSource="listOfPosts">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -26,3 +26,4 @@
         </ListBox>
     </StackPanel>
 </Page>
+

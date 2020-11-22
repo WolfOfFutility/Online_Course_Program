@@ -35,6 +35,13 @@ namespace OnlineCoursesProgram.Pages
             postListBox.ItemsSource = listOfPosts;
         }
 
+        // Handler for when the add new post button is clicked
+        // Redirects to the create new post page
+        public void AddNewPostClick(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(CreateNewPostPage), teacher);
+        }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             teacher = e.Parameter as Teacher;

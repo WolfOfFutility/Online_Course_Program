@@ -3,7 +3,6 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="CourseName" />
     <RootPropertyPathName Name="CourseCode" />
-    <RootPropertyPathName Name="Author" />
     <RootPropertyPathName Name="TextContent" />
     <RootPropertyPathName Name="DatePosted" />
   </Roots.PropertyPathNames>
@@ -79,6 +78,20 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="OnlineCoursesProgram.Pages.CreateNewCoursePage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="Header" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="PlaceholderText" />
+      <RootEvent Name="SelectionChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding" />
+    <RootType FullName="OnlineCoursesProgram.Pages.CreateNewPostPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="VerticalScrollMode" />
       <RootProperty Name="VerticalAlignment" />
@@ -103,10 +116,6 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
-    <RootType FullName="Windows.UI.Xaml.DataTemplate">
-      <RootProperty Name="Template" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="OnlineCoursesProgram.Pages.EnrollPromptsPage" />
     <RootType FullName="OnlineCoursesProgram.HomePage" />
     <RootType FullName="Windows.UI.Xaml.Controls.MediaPlayerElement">
@@ -139,13 +148,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
       <RootProperty Name="Header" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
-      <RootProperty Name="Header" />
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="OnlineCoursesProgram.RecordingPage" />
     <RootType FullName="OnlineCoursesProgram.TeacherHomePage" />

@@ -10,6 +10,7 @@ App.xbf
 OnlineCoursesProgram.xr.xml
 Pages\ClassListPage.xbf
 Pages\CreateNewCoursePage.xbf
+Pages\CreateNewPostPage.xbf
 Pages\EnrollPromptsPage.xbf
 Pages\HomePage.xbf
 Pages\IndivClassPage.xbf

@@ -10,15 +10,16 @@
 
     <StackPanel Background="#333">
         <TextBlock Text="Create New Post" FontSize="25" FontWeight="Bold" Margin="20"/>
-        <ComboBox x:Name="selectedCourseCombo" Header="Post To: " Margin="20" Width="200" ItemsSource="listOfCourses" SelectionChanged="NewCourseSelected">
+        <ComboBox x:ConnectionId='2' x:Name="selectedCourseCombo" Header="Post To: " Margin="20" Width="200" ItemsSource="listOfCourses"                                     >
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding CourseName}"/>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <TextBox x:Name="postTitleField" Width="200" HorizontalAlignment="Left" Margin="20" Header="Post Title: "/>
-        <TextBox x:Name="postContentField" Width="400" Height="150" HorizontalAlignment="Left" Margin="20" Header="Post Content: "/>
-        <Button Content="Create" Margin="20" Click="SaveNewPost"/>
+        <TextBox x:ConnectionId='3' x:Name="postTitleField" Width="200" HorizontalAlignment="Left" Margin="20" Header="Post Title: "/>
+        <TextBox x:ConnectionId='4' x:Name="postContentField" Width="400" Height="150" HorizontalAlignment="Left" Margin="20" Header="Post Content: "/>
+        <Button x:ConnectionId='5' Content="Create" Margin="20"                    />
     </StackPanel>
 </Page>
+

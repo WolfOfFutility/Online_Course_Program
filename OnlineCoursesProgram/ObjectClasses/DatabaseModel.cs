@@ -205,23 +205,40 @@ namespace OnlineCoursesProgram
         }
 
         // creates a new post entity in the database
-        public void CreateNewPost(string author, string content, string datePosted, int authorID)
+        public async Task<int> CreateNewPost(string author, string content, string datePosted, int authorID)
         {
-            command = new SqlCommand("INSERT INTO Posts (Author, DatePosted, Content, AuthorID) VALUES (@author, @datePosted, @content, @authorID)", conn);
+            command = new SqlCommand("INSERT INTO Posts (Author, DatePosted, Content, AuthorID) OUTPUT INSERTED.PostID VALUES (@author, @datePosted, @content, @authorID)", conn);
             command.Parameters.AddWithValue("@author", author);
             command.Parameters.AddWithValue("@datePosted", datePosted);
             command.Parameters.AddWithValue("@content", content);
             command.Parameters.AddWithValue("@authorID", authorID);
 
-            int affectedRows = command.ExecuteNonQuery();
-            System.Diagnostics.Debug.WriteLine(affectedRows);
+            int newPostID = 0;
+            reader = command.ExecuteReader();
+
+            try
+            {
+                while(reader.Read())
+                {
+                    newPostID = (int)reader["PostID"];
+                }
+            }
+            catch(Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e);
+            }
+            finally
+            {
+                reader.Close();
+            }
+
+            return newPostID;
         }
 
         // links a post with a course
-        public void AddPostToCourse(int coursePostID, int courseID, int postID)
+        public void AddPostToCourse(int courseID, int postID)
         {
-            command = new SqlCommand("INSERT INTO CoursePost (CoursePostID, CourseID, PostID) VALUES (@coursePostID, @courseID, @postID)", conn);
-            command.Parameters.AddWithValue("@coursePostID", coursePostID);
+            command = new SqlCommand("INSERT INTO CoursePost (CourseID, PostID) VALUES (@courseID, @postID)", conn);
             command.Parameters.AddWithValue("@courseID", courseID);
             command.Parameters.AddWithValue("@postID", postID);
 
